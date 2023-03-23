@@ -4,7 +4,7 @@ const Header = ({ course }) => {
   return (
     <div>
       {" "}
-      <h3> {course}</h3>{" "}
+      <h3> {course.name}</h3>{" "}
     </div>
   );
 };

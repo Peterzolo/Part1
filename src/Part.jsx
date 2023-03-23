@@ -1,18 +1,14 @@
 import React from "react";
 
-const Part = ({ part1, exercises1, part2, exercises2, part3, exercises3 }) => {
+const Part = ({ parts }) => {
   return (
     <div>
-      {" "}
-      <p>
-        {part1} {exercises1}
-      </p>
-      <p>
-        {part2} {exercises2}
-      </p>
-      <p>
-        {part3} {exercises3}
-      </p>
+      {parts.map((part) => (
+        <div>
+          <p>{part.name}</p>
+          <p>{part.exercises}</p>
+        </div>
+      ))}
     </div>
   );
 };
