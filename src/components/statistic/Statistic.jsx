@@ -16,6 +16,10 @@ const Statistic = () => {
     setBad(feedback);
   };
 
+  const total = good + neutral + bad;
+  const averageScore = total / 3;
+  let percentageOfpositive = (good / 100) * 100;
+
   return (
     <div>
       <h3>Customers' Feedback</h3>
@@ -33,6 +37,13 @@ const Statistic = () => {
           <li>Neutral : {neutral}</li>
           <li>Bad : {bad}</li>
         </ul>
+        <div className="section-wrap">
+          <div className="total">Total feedback : {total}</div>
+          <div className="total">Average : {averageScore}</div>
+          <div className="total">
+            Percent of positive : {percentageOfpositive}
+          </div>
+        </div>
       </div>
     </div>
   );
