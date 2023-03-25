@@ -2,6 +2,8 @@ import Content from "./Content";
 import Header from "./Header";
 import Total from "./Total";
 
+import "../src/styles/styles.css";
+
 const App = () => {
   const course = {
     name: "Half Stack application development",
@@ -22,13 +24,14 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <Header course={course} />
-      <div>
+      <div className="exercise1">
         <Header course={course.name} />
         <Content parts={course.parts} />
         <Total parts={course.parts} />
       </div>
+      <hr />
     </div>
   );
 };
