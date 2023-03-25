@@ -1,3 +1,4 @@
+import { Button } from "../button/Button";
 import StatisticLine from "../StatisticLine";
 
 import "./Statistic.css";
@@ -21,15 +22,18 @@ const Statistic = ({ good, setGood, neutral, setNeutral, bad, setBad }) => {
     <div>
       <h3 className="title">Give Feedback</h3>
       <div className="button-group">
-        <button className="btn" onClick={() => handleGood(good + 1)}>
-          Good
-        </button>
-        <button className="btn" onClick={() => handleNeutral(neutral + 1)}>
-          Neutral
-        </button>
-        <button className="btn" onClick={() => handleBad(bad + 1)}>
-          Bad
-        </button>
+        <Button
+          className="btn"
+          text="Good"
+          onClick={() => handleGood(good + 1)}
+        />
+
+        <Button
+          className="btn"
+          text="Neutral"
+          onClick={() => handleNeutral(neutral + 1)}
+        />
+        <Button className="btn" text="Bad" onClick={() => handleBad(bad + 1)} />
       </div>
       <h4>Statistic</h4>
       {total ? (

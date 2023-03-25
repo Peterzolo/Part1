@@ -24,7 +24,8 @@
 }
 
 .btn {
-  background-color: lightblue;
+  background-color: #4096ff;
+  color: white;
 }
 
 .anecdotes {
@@ -46,4 +47,10 @@
 
 .num-of-vote {
   margin-top: 10px;
+}
+
+.total-votes {
+  padding: 10px;
+  width: 200px;
+  font-weight: bold;
 }

@@ -1,3 +1,5 @@
-export const Button = ({ handleClick, text }) => (
-  <button onClick={handleClick}>{text}</button>
+export const Button = ({ onClick, text, className }) => (
+  <button onClick={onClick} text={text} className={className}>
+    {text}
+  </button>
 );
