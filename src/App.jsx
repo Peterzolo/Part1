@@ -33,7 +33,6 @@ const App = () => {
         <Total parts={course.parts} />
       </div>
       <hr />
-      <h3>Customers' Feedback</h3>
       <Statistic />
     </div>
   );
