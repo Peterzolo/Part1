@@ -3,6 +3,7 @@ import Header from "./Header";
 import Total from "./Total";
 
 import "../src/styles/styles.css";
+import Statistic from "./components/statistic/Statistic";
 
 const App = () => {
   const course = {
@@ -32,6 +33,8 @@ const App = () => {
         <Total parts={course.parts} />
       </div>
       <hr />
+      <h3>Customers' Feedback</h3>
+      <Statistic />
     </div>
   );
 };
