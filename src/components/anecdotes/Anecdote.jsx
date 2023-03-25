@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "../statistic/Statistic.css";
+
 const anecdotes = [
   "If it hurts, do it more often.",
   "Adding manpower to a late software project makes it later!",
@@ -22,8 +24,10 @@ const Anecdote = () => {
   return (
     <div>
       <h3>Random Anecdotes</h3>
-      <p>{anecdotes[selected]}</p>
-      <button onClick={handleClick}>next Anecdote</button>
+      <p className="anecdotes">{anecdotes[selected]}</p>
+      <button className="btn" onClick={handleClick}>
+        next Anecdote
+      </button>
     </div>
   );
 };
