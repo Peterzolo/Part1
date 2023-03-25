@@ -32,3 +32,18 @@
   padding: 10px;
   border-radius: 10px;
 }
+.anecdotes-votes {
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.anecdotes-votes li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.num-of-vote {
+  margin-top: 10px;
+}

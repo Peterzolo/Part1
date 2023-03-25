@@ -15,10 +15,17 @@ const anecdotes = [
 
 const Anecdote = () => {
   const [selected, setSelected] = useState(0);
+  const [voteCount, setVoteCount] = useState(0);
+  const [votes, setVotes] = useState([]);
 
   const handleClick = () => {
     const randomIndex = Math.floor(Math.random() * anecdotes.length);
     setSelected(randomIndex);
+  };
+
+  const handleAnecdoteVote = () => {
+    setVoteCount(voteCount + 1);
+    setVotes([...votes, voteCount + 1]);
   };
 
   return (
@@ -28,6 +35,18 @@ const Anecdote = () => {
       <button className="btn" onClick={handleClick}>
         next Anecdote
       </button>
+      <hr />
+      <button className="btn" onClick={handleAnecdoteVote}>
+        Vote
+      </button>
+
+      <h4 className="num-vote"> Number of Votes :{voteCount}</h4>
+
+      <ul className="anecdotes-votes">
+        {votes.map((vote) => (
+          <li key={vote}>Vote {vote}</li>
+        ))}
+      </ul>
     </div>
   );
 };
