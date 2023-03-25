@@ -27,7 +27,6 @@ const Anecdote = () => {
       <p className="anecdotes">{anecdotes[selected]}</p>
       <p>has {votes[selected]} votes</p>
       <Button className="btn" text="next Anecdote" onClick={handleClick} />
-
       <hr />
 
       <Button
