@@ -26,17 +26,27 @@ const Statistic = ({ good, setGood, neutral, setNeutral, bad, setBad }) => {
       <h4>Statistic</h4>
       {total ? (
         <div className="stat-wrap">
-          <ul>
+          <div>
             <StatisticLine text="Good" value={good} />
             <StatisticLine text="Neutral" value={neutral} />
             <StatisticLine text="Bad" value={bad} />
-          </ul>
-          <div className="section-wrap">
-            <div className="total">Total feedback : {total}</div>
-            <div className="total">Average : {averageScore}</div>
-            <div className="total">
-              Percent of positive : {percentageOfpositive} %
-            </div>
+          </div>
+
+          <div>
+            <table>
+              <tr className="table-wrap">
+                <th className="text">Total</th>
+                <td>{total}</td>
+              </tr>
+              <tr className="table-wrap">
+                <th className="text">Average</th>
+                <td>{averageScore}</td>
+              </tr>
+              <tr className="table-wrap">
+                <th className="text">Positive</th>
+                <td>{percentageOfpositive}</td>
+              </tr>
+            </table>
           </div>
         </div>
       ) : (
