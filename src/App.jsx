@@ -5,6 +5,7 @@ import Total from "./Total";
 import "../src/styles/styles.css";
 import Statistic from "./components/statistic/Statistic";
 import { useState } from "react";
+import Anecdote from "./components/anecdotes/Anecdote";
 
 const App = () => {
   const course = {
@@ -45,6 +46,9 @@ const App = () => {
         bad={bad}
         setBad={setBad}
       />
+
+      <hr />
+      <Anecdote />
     </div>
   );
 };

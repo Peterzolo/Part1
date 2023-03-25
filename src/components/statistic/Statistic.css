@@ -1,5 +1,28 @@
+.stat-wrap {
+  width: 500px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .text {
   display: flex;
-  width: 300px;
+  width: 400px;
   justify-content: space-between;
+}
+
+.title {
+  text-align: left;
+}
+
+.button-group {
+  background-color: aliceblue;
+  width: 500px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  background-color: lightblue;
 }

@@ -1,5 +1,7 @@
 import StatisticLine from "../StatisticLine";
 
+import "./Statistic.css";
+
 const Statistic = ({ good, setGood, neutral, setNeutral, bad, setBad }) => {
   const handleGood = (feedback) => {
     setGood(feedback);
@@ -17,11 +19,17 @@ const Statistic = ({ good, setGood, neutral, setNeutral, bad, setBad }) => {
 
   return (
     <div>
-      <h3>Give Feedback</h3>
+      <h3 className="title">Give Feedback</h3>
       <div className="button-group">
-        <button onClick={() => handleGood(good + 1)}>Good</button>
-        <button onClick={() => handleNeutral(neutral + 1)}>Neutral</button>
-        <button onClick={() => handleBad(bad + 1)}>Bad</button>
+        <button className="btn" onClick={() => handleGood(good + 1)}>
+          Good
+        </button>
+        <button className="btn" onClick={() => handleNeutral(neutral + 1)}>
+          Neutral
+        </button>
+        <button className="btn" onClick={() => handleBad(bad + 1)}>
+          Bad
+        </button>
       </div>
       <h4>Statistic</h4>
       {total ? (
@@ -34,18 +42,20 @@ const Statistic = ({ good, setGood, neutral, setNeutral, bad, setBad }) => {
 
           <div>
             <table>
-              <tr className="table-wrap">
-                <th className="text">Total</th>
-                <td>{total}</td>
-              </tr>
-              <tr className="table-wrap">
-                <th className="text">Average</th>
-                <td>{averageScore}</td>
-              </tr>
-              <tr className="table-wrap">
-                <th className="text">Positive</th>
-                <td>{percentageOfpositive}</td>
-              </tr>
+              <tbody className="table-body">
+                <tr className="text">
+                  <th>Total</th>
+                  <td>{total}</td>
+                </tr>
+                <tr className="text">
+                  <th>Average</th>
+                  <td>{averageScore}</td>
+                </tr>
+                <tr className="text">
+                  <th>Positive</th>
+                  <td>{percentageOfpositive}</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>

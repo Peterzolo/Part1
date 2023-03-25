@@ -5,10 +5,12 @@ const StatisticLine = ({ text, value }) => {
   return (
     <div>
       <table>
-        <tr className="table-wrap">
-          <th className="text">{text}</th>
-          <td>{value}</td>
-        </tr>
+        <tbody>
+          <tr className="text">
+            <th>{text}</th>
+            <td>{value}</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   );
