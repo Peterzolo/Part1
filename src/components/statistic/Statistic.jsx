@@ -1,11 +1,4 @@
-import React, { useState } from "react";
-// import { Button } from "../button/Button";
-
-const Statistic = () => {
-  const [good, setGood] = useState(0);
-  const [neutral, setNeutral] = useState(0);
-  const [bad, setBad] = useState(0);
-
+const Statistic = ({ good, setGood, neutral, setNeutral, bad, setBad }) => {
   const handleGood = (feedback) => {
     setGood(feedback);
   };
@@ -41,7 +34,7 @@ const Statistic = () => {
           <div className="total">Total feedback : {total}</div>
           <div className="total">Average : {averageScore}</div>
           <div className="total">
-            Percent of positive : {percentageOfpositive}
+            Percent of positive : {percentageOfpositive} %
           </div>
         </div>
       </div>

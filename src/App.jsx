@@ -4,6 +4,7 @@ import Total from "./Total";
 
 import "../src/styles/styles.css";
 import Statistic from "./components/statistic/Statistic";
+import { useState } from "react";
 
 const App = () => {
   const course = {
@@ -24,6 +25,10 @@ const App = () => {
     ],
   };
 
+  const [good, setGood] = useState(0);
+  const [neutral, setNeutral] = useState(0);
+  const [bad, setBad] = useState(0);
+
   return (
     <div className="container">
       <Header course={course} />
@@ -33,7 +38,14 @@ const App = () => {
         <Total parts={course.parts} />
       </div>
       <hr />
-      <Statistic />
+      <Statistic
+        good={good}
+        setGood={setGood}
+        neutral={neutral}
+        setNeutral={setNeutral}
+        bad={bad}
+        setBad={setBad}
+      />
     </div>
   );
 };
